@@ -16,7 +16,7 @@ source /root/Env/venv/bin/activate
 export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
 export PYTHONPATH=$DIR:$PYTHONPATH
 
-exec ../bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
+exec /home/django/django-simples/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
   --name $NAME \
   --workers $WORKERS \
   --user=$USER \
